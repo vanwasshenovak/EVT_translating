@@ -20,33 +20,41 @@
             </sourceDesc>
         </fileDesc>
     </teiHeader>
-    
+    <!--everything must begin with fol_ -->
     <facsimile>
-        <surface corresp="#238_fol_IIr" xml:id="238_surf_IIr">
-            <graphic height="1800px" url="images\single\238.f.IIr.jpg" width="1200px"/>
+        <surface corresp="#fol_2r" xml:id="surf_2r">
+            <graphic height="1800px" url="../images/single/fol_2r.jpg" width="1335px"/>
         </surface>
         
-        <surface corresp="#238_fol_IIv" xml:id="238_surf_IIv">
-            <graphic height="1800px" url="images\single\238.f.IIv.jpg" width="1200px"/>
+        <surface corresp="#fol_2v" xml:id="surf_2v">
+            <graphic height="1800px" url="../images/single/fol_2v.jpg" width="1316px"/>
         </surface>
     </facsimile>
     
-    <text n="BSB Codex Arbicus 238" xml:id="238">
-    <front xml:id="238_front">
+    
+    
+    <text n="BSB Codex Arbicus 238" xml:id="BSB_238">
+        
+    <front xml:id="BSB_238_front">
         <!-- #######################################  to be added later  ####################################### -->
+
+        <div type="info" xml:id="BSB_238_info">
+            <p>Info</p>
+        </div>
     </front>  
     <body>
-        <div xml:id="238_div">
+        <div xml:id="BSB_238_div">
             <!-- #######################################  folio IIr  ####################################### -->
-            <pb n="IIr" xml:id="238_fol_IIr"/>
+            <pb n="IIr" xml:id="fol_2r"/>
             <l n="1">
                 بسْم الاب والابن والُّروح القدس اله واحِدً. قال يرونم القس
             </l>
             <!-- #######################################  folio IIv  ####################################### -->
-            <pb n="IIv" xml:id="238_fol_IIv"/>
+            <pb n="IIv" xml:id="fol_2v"/>
             <l n="1">
                 انْ يميزُوا اوَايل هذَا الاِنجِيل ووسطِه وَاوَاخِرِه ويتصَفَّحُوا كَيْفَ 
             </l>
+            
         </div>
     </body>
     <back>

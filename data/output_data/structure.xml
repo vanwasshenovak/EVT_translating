@@ -5,27 +5,22 @@
    <msDesc active="1"/>
    <headerInfo active="1"/>
    <front active="1"/>
-   <liste>
-      <listPerson active="1" lang="def">LIST_PERSON</listPerson>
-      <listPlace active="1" lang="def">LIST_PLACE</listPlace>
-      <listOrg active="1" lang="def">LIST_ORG</listOrg>
-   </liste>
+   <liste/>
    <editions>
       <edition>Diplomatic</edition>
-      <edition>Interpretative</edition>
    </editions>
    <textpage>
-      <text n="238" label="BSB Codex Arbicus 238">
-         <pb n="IIr">238_fol_IIr</pb>
-         <pb n="IIv">238_fol_IIv</pb>
+      <text n="BSB_238" label="BSB Codex Arbicus 238">
+         <pb n="IIr">fol_2r</pb>
+         <pb n="IIv">fol_2v</pb>
       </text>
    </textpage>
    <pages>
       <pair>
-         <pb n="IIr">238_fol_IIr</pb>
+         <pb n="IIr">fol_2r</pb>
       </pair>
       <pair>
-         <pb n="IIv">238_fol_IIv</pb>
+         <pb n="IIv">fol_2v</pb>
       </pair>
    </pages>
 </xml>
