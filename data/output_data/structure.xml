@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<xml xmlns="http://www.w3.org/1999/xhtml">
+   <msDesc active="1"/>
+   <headerInfo active="1"/>
+   <front active="1"/>
+   <liste>
+      <listPerson active="1" lang="def">LIST_PERSON</listPerson>
+      <listPlace active="1" lang="def">LIST_PLACE</listPlace>
+      <listOrg active="1" lang="def">LIST_ORG</listOrg>
+   </liste>
+   <editions>
+      <edition>Diplomatic</edition>
+      <edition>Interpretative</edition>
+   </editions>
+   <textpage>
+      <text n="238" label="BSB Codex Arbicus 238">
+         <pb n="IIr">238_fol_IIr</pb>
+         <pb n="IIv">238_fol_IIv</pb>
+      </text>
+   </textpage>
+   <pages>
+      <pair>
+         <pb n="IIr">238_fol_IIr</pb>
+      </pair>
+      <pair>
+         <pb n="IIv">238_fol_IIv</pb>
+      </pair>
+   </pages>
+</xml>
