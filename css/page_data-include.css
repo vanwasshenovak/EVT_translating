@@ -55,7 +55,7 @@ div[id*='regesto'] hr{
 	/*max-width: 600px;*/
 	padding-left: 10px;
 	margin: 10px auto;
-	text-align: left;
+	text-align: right;
 	line-height: 28px;
     font-size: 100%;
 }
@@ -64,7 +64,7 @@ div[id*='regesto'] hr{
 	margin-top: -30px;
 	max-width: 600px;
 	margin: 10px auto;
-	text-align: left;
+	text-align: right;
 }
 
 #regesto_cont, #regesto_cont-add {
