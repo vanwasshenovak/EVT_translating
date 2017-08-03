@@ -57,6 +57,9 @@
 						href="{$html_path}/css/font-awesome.min.css" />
 					<link rel="stylesheet" type="text/css"
 						href="{$html_path}/css/evt-icons.css" />
+					<!-- sound clip CSS -->
+					<link href='https://cdn.knightlab.com/libs/soundcite/latest/css/player.css' rel='stylesheet' type='text/css'/>
+						
 				</xsl:when>
 				<xsl:otherwise>
 					<link rel="stylesheet" type="text/css" href="{$html_path}/css/page_data-include-{$output}.css"/>
@@ -82,6 +85,8 @@
 				<script type="text/javascript" src="{$html_path}/js/main/interface_control/ic_viewModes.js"/>
 				
 				<script type="text/javascript" src="{$html_path}/js/main/interface_control/ic_main.js"/>
+				<!-- sound clip JS  --> 
+				<script type='text/javascript' src='https://cdn.knightlab.com/libs/soundcite/latest/js/soundcite.min.js'/>
 				<xsl:comment>/interface control</xsl:comment>
 				
 				<script type="text/javascript" src="{$html_path}/js/main/utils.js"/>
