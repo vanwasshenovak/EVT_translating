@@ -192,6 +192,13 @@
         }
     }
 
+    function remove_all_clips() {
+        for (var i = 0; i < clips.length; i++) {
+            delete clips[i];
+        }
+        clips = [];
+    }
+
     function Clip(el) {
         this.el = el;
         this.start = el.hasAttribute("data-start") ? el.getAttribute("data-start") : 0;
@@ -200,6 +207,8 @@
         this.plays_left = this.plays;
         this.playing = false;
         this.sound = null;
+        delete clips;
+        clips = [];
         clips.push(this)
     }
     Clip.prototype.sound_loaded = function() {
@@ -224,6 +233,16 @@
         var position = this.sound_position();
         var relative_position = position - this.start;
         var percentage = relative_position * 100 / totalTime;
+
+        var lines = document.getElementsByClassName("dipl-left");
+        for (var i = 0; i < lines.length; i++) {
+            if (position > lines[i].getAttribute("data-start-time") && position < lines[i].getAttribute("data-end-time")) { // in the range
+                lines[i].classList.add("yellowHL");
+            } else {
+                lines[i].classList.remove("yellowHL");
+            }
+        }
+
         var update_function = SOUNDCITE_CONFIG.update_playing_element || update_playing_element;
         update_function(this.el, percentage)
     };
@@ -299,6 +318,9 @@
         audio.setAttribute("src", this.url);
         audio.setAttribute("preload", "true");
         audio_container.appendChild(audio);
+        while (audio_container.childNodes.length > 1) {
+            audio_container.removeChild(audio_container.firstChild);
+        }
         this.sound = $Popcorn("#" + this.id, {
             frameAnimation: true
         });
@@ -346,7 +368,9 @@
     PopcornClip.prototype._play_sound = function() {
         removeClass(this.el, "soundcite-loading soundcite-play");
         addClass(this.el, "soundcite-pause");
-        this.sound.play();
+        // Removed to prevent double playing
+        // this.sound.play();
+        clips[clips.length-1].sound.play();
         this.playing = true;
         this.sound.on("timeupdate", bind(this.track_progress, this))
     };
@@ -395,4 +419,18 @@
     soundcite.clips = clips;
     soundcite.pause_all_clips = pause_all_clips;
     soundcite.normalize_background_color = normalize_background_color
+
+    soundcite.reload_sounds = function() {
+        for (var i = 0; i < soundcite_elements.length; i++) {
+            var el = soundcite_elements[i];
+            if (el.getAttribute("data-url")) {
+                new PopcornClip(el)
+            } else if (el.getAttribute("data-id")) {
+                new SoundCloudClip(el)
+            } else {
+                console.log('Unable to form Soundcite element because of missing attributes. The offending Soundcite was "' + el.textContent + '."');
+                console.log(el)
+            }
+        }
+    }
 });

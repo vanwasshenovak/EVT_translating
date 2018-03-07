@@ -6,7 +6,7 @@
       <meta property="og:title" content="&#xA;                    BSB Codex Arbicus 238&#xA;                "></meta>
       <meta property="og:image" content="./data/input_data/images/thumb_fb.jpg"></meta>
       <title>
-         BSB Codex Arbicus 238
+         BSB Codex Arabicus 238
          
       </title>
       <link rel="stylesheet" type="text/css" href="./css/main.css"></link>
@@ -24,6 +24,7 @@
       <!--/jQuery lib-->
       <!--main lib-->
       <!--interface control-->
+      <script type="text/javascript" src="./js/plugin/soundcite.js"></script>
       <script type="text/javascript" src="./js/main/interface_control/ic_generic_bindings.js"></script>
       <script type="text/javascript" src="./js/main/interface_control/ic_global_menu.js"></script>
       <script type="text/javascript" src="./js/main/interface_control/ic_internal_fullscreen.js"></script>
@@ -34,7 +35,6 @@
       <script type="text/javascript" src="./js/main/interface_control/ic_search.js"></script>
       <script type="text/javascript" src="./js/main/interface_control/ic_viewModes.js"></script>
       <script type="text/javascript" src="./js/main/interface_control/ic_main.js"></script>
-      <script type="text/javascript" src="./js/plugin/soundcite.js"></script>
       <!--/interface control-->
       <script type="text/javascript" src="./js/main/utils.js"></script>
       <!--/main lib-->
@@ -280,10 +280,6 @@
                         <i class="fa fa-info-circle"></i>
                      </span> -->
 
-                     <span class="imageTopTool mainButtons soundcite-container" id="switchFront" value="reg" title="LISTEN_TO_THIS_TEXT" lang="def">
-                        <span class="soundcite" data-url="http://personal.denison.edu/~johnsonc/translatingthetranslators/audio/238-1.m4a"></span>
-                     </span>
-
                   </div>
 
                         <i class="fa fa-times-circle closeFullScreen" id="closeFullScreenRight" title="COLLAPSE_FRAME" lang="def"></i></header>
@@ -320,7 +316,11 @@
                            <div class="option" data-value="all" lang="def">SELECT_ALL</div>
                            <div class="option" data-value="clear" lang="def">CLEAR_SELECTION</div>
                         </div>
-                     </div></span><span class="mainButtons small font-size-controller" data-action="decrease" title="DECREASE_FONT_SIZE" lang="def"><i class="fa fa-font"></i><i class="fa fa-minus"></i></span><span class="mainButtons small font-size-controller" data-action="increase" title="INCREASE_FONT_SIZE" lang="def"><i class="fa fa-font"></i><i class="fa fa-plus"></i></span></div>
+                     </div></span><span class="mainButtons small font-size-controller" data-action="decrease" title="DECREASE_FONT_SIZE" lang="def"><i class="fa fa-font"></i><i class="fa fa-minus"></i></span><span class="mainButtons small font-size-controller" data-action="increase" title="INCREASE_FONT_SIZE" lang="def"><i class="fa fa-font"></i><i class="fa fa-plus"></i></span>
+                  <!-- Working with current naming convention. Needs update -->
+                     <span class="imageTopTool mainButtons soundcite-container" id="switchFront" value="reg" title="LISTEN_TO_THIS_TEXT" lang="def">
+                        <span class="soundcite" id="soundcite-target" data-page="" data-url=""></span>
+                     </span></div>
             </div>
          </section>
          <section id="central_button"><input id="folio_page_number" type="hidden" value=""></input></section>

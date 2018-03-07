@@ -84,7 +84,7 @@ $(function() {
 						.attr("data-value", current_id.toLowerCase())
 						.attr("lang", 'def')
 						.addClass('option')
-						.text(current_id.toUpperCase())
+						.text(current_id)
 				);
 			});
 			
@@ -752,6 +752,12 @@ $(function() {
 
  					if ( $("#front_cont").length > 0 ) { 
 						updateFrontContent(current_doc);
+ 					}
+
+ 					$("#soundcite-target").attr("data-url", "/data/input_data/audio/" + current_page + ".m4a")
+ 						.attr("data-page", current_page);
+ 					if (typeof soundcite !== 'undefined') { // kind of hacky...doesn't do it on first load
+ 						soundcite.reload_sounds();
  					}
 
 					//current_page = hash.replace( /^#/, '' );

@@ -577,7 +577,7 @@ footer{
 	min-height: 456px;
 	overflow: visible;
 	position: relative;
-	top: 51px;
+	top: 35px;
 	/*overflow-x: hidden;*/
 }
 #regesto, #regesto-add{
@@ -3072,4 +3072,13 @@ ul.ul_list li:hover, ul.ul_list li.list_element_opened{
 .soundcite-container .soundcite-play:before, .soundcite-container .soundcite-pause:before {
     top: 0.25em;
     left: 0.4em;
+}
+
+.yellowHL {
+	background-color: #ffff99;
+}
+
+.yellowHL:hover {
+	background-color: #ffff00;
+	cursor: pointer;
 }
