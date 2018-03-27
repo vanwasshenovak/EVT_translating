@@ -236,7 +236,10 @@
 
         var lines = document.getElementsByClassName("dipl-left");
         for (var i = 0; i < lines.length; i++) {
-            if (position > lines[i].getAttribute("data-start-time") && position < lines[i].getAttribute("data-end-time")) { // in the range
+            var edition   = $('#span_ee_select > div > span').attr('data-value');
+            var starttime = lines[i].getAttribute("data-start-time-" + edition);
+            var endtime   = lines[i].getAttribute("data-end-time-" + edition);
+            if (position > starttime && position < endtime) { // in the range
                 lines[i].classList.add("yellowHL");
             } else {
                 lines[i].classList.remove("yellowHL");
@@ -421,15 +424,13 @@
     soundcite.normalize_background_color = normalize_background_color
 
     soundcite.reload_sounds = function() {
+        pause_all_clips();
+        $(".soundcite-container").hide();
         for (var i = 0; i < soundcite_elements.length; i++) {
             var el = soundcite_elements[i];
-            if (el.getAttribute("data-url")) {
+            if (el.getAttribute("data-url") && UrlExists(el.getAttribute("data-url"))) {
+                $(".soundcite-container").show();
                 new PopcornClip(el)
-            } else if (el.getAttribute("data-id")) {
-                new SoundCloudClip(el)
-            } else {
-                console.log('Unable to form Soundcite element because of missing attributes. The offending Soundcite was "' + el.textContent + '."');
-                console.log(el)
             }
         }
     }

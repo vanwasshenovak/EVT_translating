@@ -754,11 +754,7 @@ $(function() {
 						updateFrontContent(current_doc);
  					}
 
- 					$("#soundcite-target").attr("data-url", "/data/input_data/audio/" + current_page + ".m4a")
- 						.attr("data-page", current_page);
- 					if (typeof soundcite !== 'undefined') { // kind of hacky...doesn't do it on first load
- 						soundcite.reload_sounds();
- 					}
+ 					reloadPageAudio(current_page, $('#right_menu #span_ee_select > div > span').attr('data-value'));
 
 					//current_page = hash.replace( /^#/, '' );
 					//var checkpp = $(xml).find('text pb:contains('+current_page+')').text();

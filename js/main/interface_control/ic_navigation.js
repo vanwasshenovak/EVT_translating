@@ -157,6 +157,7 @@ function gotopage(pp_val, pp_lab, state){
     var current_font_size;
     //N.B. i caricamenti delle immagini si attivano grazie agli eventi change dei label_selected in iviewer_config
     edition = $("#span_ee_select .main_ee_select .label_selected").attr('data-value').toLowerCase();
+
     // $('#span_pp_select .label_selected').trigger('change');
     
     if ( $('#text_cont').attr('data-font-size') != '') {
@@ -743,6 +744,10 @@ function bindEEselectClick() {
 
             other_frame = "";
             other_parent = "";
+
+            if ($(this).parent().parent().parent().parent().attr("id") === "right_menu") {
+                reloadPageAudio(pp_val, $(this).attr('data-value').toLowerCase());
+            }
             
             // Se ho cliccato su un elemento del selettore di sinistra
             if ($(this).parents(".like_select").attr("id") === "span_ee_select-add") {
