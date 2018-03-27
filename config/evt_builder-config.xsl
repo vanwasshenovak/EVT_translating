@@ -43,7 +43,7 @@
 	<!-- default: 'Welcome to an edition created with EVT' -->
 	<xsl:param name="welcomeMsg">
 		<div>
-			<p class="title main">Welcome to BSB Codex Arbicus 238 created with EVT!</p> 
+			<p class="title main">Welcome to BSB Codex Arabicus 238 created with EVT!</p> 
 		</div>
 		<div>It is recommended to go to full screen mode so that all available screen space is used to show the manuscript images and the transcription text.</div>
 		<div>For more information refer to the EVT Manual in the "doc" folder. 
