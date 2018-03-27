@@ -226,7 +226,7 @@
         addClass(this.el, "soundcite-play");
         this.stop_sound();
         this.playing = false;
-        this.plays_left = this.plays
+        this.plays_left = this.plays;
     };
     Clip.prototype.track_progress = function() {
         var totalTime = this.end - this.start;
@@ -241,6 +241,11 @@
             var endtime   = lines[i].getAttribute("data-end-time-" + edition);
             if (position > starttime && position < endtime) { // in the range
                 lines[i].classList.add("yellowHL");
+                if (parseFloat(position).toFixed(1) === parseFloat(starttime).toFixed(1)) {
+                    $("#main_right_frame #text_cont").animate({
+                        scrollTop: lines[i].offsetTop + "px",
+                    });
+                }
             } else {
                 lines[i].classList.remove("yellowHL");
             }
