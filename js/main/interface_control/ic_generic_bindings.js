@@ -42,6 +42,21 @@ function bindOptionHover() {
     });
 }
 
+function reloadPageAudio(current_page, current_edition) {
+    $("#soundcite-target").attr("data-url", "/data/input_data/audio/" + current_page + "_" + current_edition + ".m4a")
+        .attr("data-page", current_page);
+    if (typeof soundcite !== 'undefined') { // kind of hacky...doesn't do it on first load
+        soundcite.reload_sounds();
+    }
+}
+
+function UrlExists(url) {
+    var http = new XMLHttpRequest();
+    http.open('HEAD', url, false);
+    http.send();
+    return http.status!=404;
+}
+
 /*= BIND EVENT TO OPEN OPTION CONTAINER OF SELECTS =*/
 function bindOpenSelectClick() {
     /* Apertura option container dei selettori a tendina */
@@ -320,6 +335,13 @@ function bindFontSizeControllerBtnClick() {
             'font-size': newFontSize,
             'line-height': (newFontSize+10)+'px'
         });
+    });
+}
+
+/*= BIND SOUNDCITE RESET CLICK EVENT =*/
+function bindSoundciteReset() {
+    $('.soundcite-reset').click(function(){
+        soundcite.reload_sounds();
     });
 }
 

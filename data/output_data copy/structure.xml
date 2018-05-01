@@ -11,12 +11,17 @@
       <edition>Arb-Eng</edition>
       <edition>Latin-Source</edition>
       <edition>Lat-Eng</edition>
-      
    </editions>
    <textpage>
-      <text n="BSB_238" label="BSB Codex Arbicus 238">
+      <text n="BSB_238" label="BSB Codex Arabicus 238">
          <pb n="IIr">fol_2r</pb>
          <pb n="IIv">fol_2v</pb>
+         <pb n="IIIr">fol_3r</pb>
+         <pb n="IIIv">fol_3v</pb>
+         <pb n="IVr">fol_4r</pb>
+         <pb n="IVv">fol_4v</pb>
+         <pb n="Vr">fol_5r</pb>
+         <pb n="Vv">fol_5v</pb>
       </text>
    </textpage>
    <pages>
@@ -25,6 +30,24 @@
       </pair>
       <pair>
          <pb n="IIv">fol_2v</pb>
+      </pair>
+      <pair>
+         <pb n="IIIr">fol_3r</pb>
+      </pair>
+      <pair>
+         <pb n="IIIv">fol_3v</pb>
+      </pair>
+      <pair>
+         <pb n="IVr">fol_4r</pb>
+      </pair>
+      <pair>
+         <pb n="IVv">fol_4v</pb>
+      </pair>
+      <pair>
+         <pb n="Vr">fol_5r</pb>
+      </pair>
+      <pair>
+         <pb n="Vv">fol_5v</pb>
       </pair>
    </pages>
 </xml>

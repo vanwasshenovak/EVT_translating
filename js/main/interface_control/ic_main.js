@@ -84,7 +84,7 @@ $(function() {
 						.attr("data-value", current_id.toLowerCase())
 						.attr("lang", 'def')
 						.addClass('option')
-						.text(current_id.toUpperCase())
+						.text(current_id)
 				);
 			});
 			
@@ -754,6 +754,8 @@ $(function() {
 						updateFrontContent(current_doc);
  					}
 
+ 					reloadPageAudio(current_page, $('#right_menu #span_ee_select > div > span').attr('data-value'));
+
 					//current_page = hash.replace( /^#/, '' );
 					//var checkpp = $(xml).find('text pb:contains('+current_page+')').text();
 					checkpp = $(xml).find('pages pb:contains('+current_page+')').text();
@@ -917,6 +919,9 @@ $(function() {
 
 		/*= BUTTONS =*/
 		bindBtnClick();
+		
+		/*= SOUNDCITE RESET =*/
+		bindSoundciteReset();
 
 		/*= Collapse menus =*/
 		bindCollapseMenuBtnClick();

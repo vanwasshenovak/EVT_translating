@@ -217,6 +217,7 @@ footer{
 	/*border: 2px solid #786e64;
 	border: 2px solid #3c322c;*/
 	border: 2px solid #362d28;
+	background-color: white;
 	position: relative;
 	height:100%;
 	/*width: 49.8%;*/
@@ -577,7 +578,7 @@ footer{
 	min-height: 456px;
 	overflow: visible;
 	position: relative;
-	top: 51px;
+	top: 35px;
 	/*overflow-x: hidden;*/
 }
 #regesto, #regesto-add{
@@ -1073,11 +1074,11 @@ footer{
 	background:#f5ead4;
 	color: #000;
 	text-align: left;
-	/*padding: 5px;*/
+	padding: 0 3px;
 	height: 28px;
 	/*overflow: visible;*/
 	overflow: hidden;
-	min-width: 80px;
+	/*min-width: 80px;*/
 	-moz-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
 	-webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
 	-o-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
@@ -1146,7 +1147,6 @@ footer{
 	left: -5px;
 	border-bottom: solid 1px rgba(60, 50, 44, 0.5);
 	cursor: pointer;
-	height:20px;
 	margin-right: 9px;
 }
 .option.inPage{
@@ -3047,4 +3047,39 @@ ul.ul_list li:hover, ul.ul_list li.list_element_opened{
     width: 21%;
     float: left;
     margin-right: 4%;
+}
+
+@media only screen and (max-width: 1102px) {
+	.soundcite-container {
+		display: none;
+	}
+}
+
+.soundcite-container {
+	padding: 0;
+	display: inline-block;
+}
+
+.soundcite-container.mainButtons i, .soundcite-container.mainButtons span {
+	top: 0;
+	height: 100%;
+	margin: 0;
+}
+
+.soundcite-container .soundcite-loaded {
+	border-radius: 0;
+}
+
+.soundcite-container .soundcite-play:before, .soundcite-container .soundcite-pause:before {
+    top: 0.25em;
+    left: 0.4em;
+}
+
+.yellowHL {
+	background-color: #ffff99;
+}
+
+.yellowHL:hover {
+	background-color: #ffff00;
+	cursor: pointer;
 }
