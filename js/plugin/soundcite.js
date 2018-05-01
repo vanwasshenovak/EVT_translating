@@ -432,10 +432,12 @@
     soundcite.reload_sounds = function() {
         pause_all_clips();
         $(".soundcite-container").hide();
+        $(".soundcite-reset").hide();
         for (var i = 0; i < soundcite_elements.length; i++) {
             var el = soundcite_elements[i];
             if (el.getAttribute("data-url") && UrlExists(el.getAttribute("data-url"))) {
                 $(".soundcite-container").show();
+                $(".soundcite-reset").show();
                 new PopcornClip(el)
             }
         }
