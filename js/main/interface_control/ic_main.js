@@ -919,6 +919,9 @@ $(function() {
 
 		/*= BUTTONS =*/
 		bindBtnClick();
+		
+		/*= SOUNDCITE RESET =*/
+		bindSoundciteReset();
 
 		/*= Collapse menus =*/
 		bindCollapseMenuBtnClick();

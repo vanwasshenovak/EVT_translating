@@ -338,6 +338,13 @@ function bindFontSizeControllerBtnClick() {
     });
 }
 
+/*= BIND SOUNDCITE RESET CLICK EVENT =*/
+function bindSoundciteReset() {
+    $('.soundcite-reset').click(function(){
+        soundcite.reload_sounds();
+    });
+}
+
 /*= BIND COLLAPSE MENU BUTTONS CLICK EVENT =*/
 function bindCollapseMenuBtnClick() {
     $('#header_collapse').click(function(){
