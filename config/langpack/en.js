@@ -26,6 +26,7 @@ jquery_lang_js.prototype.lang.en = {
 	"THUMBS": "Thumbs",
 	"SELECTOR_EDITION_LEVEL": "Edition Level Selector",
 	"LISTEN_TO_THIS_TEXT": "Listen to this text",
+	"RESTART_AUDIO": "Restart text's audio",
 	"REGESTO": "Regesto",
     "REGESTO_TITLE":"Click here to toggle Regesto",
 	"INFORMATION_ABOUT_THIS_TEXT": "Information about this text",
