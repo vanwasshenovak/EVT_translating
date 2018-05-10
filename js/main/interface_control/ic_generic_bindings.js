@@ -43,7 +43,7 @@ function bindOptionHover() {
 }
 
 function reloadPageAudio(current_page, current_edition) {
-    $("#soundcite-target").attr("data-url", "/data/input_data/audio/" + current_page + "_" + current_edition + ".m4a")
+    $("#soundcite-target").attr("data-url", "data/input_data/audio/" + current_page + "_" + current_edition + ".m4a")
         .attr("data-page", current_page);
     if (typeof soundcite !== 'undefined') { // kind of hacky...doesn't do it on first load
         soundcite.reload_sounds();
